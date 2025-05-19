@@ -8,7 +8,12 @@ class TamuController extends Controller
 {
     public function index()
     {
-        return view('layouts.guest');
+        return view('tamu.index'); // This view exists in your files
+    }
+    
+    // Add this method
+    public function dashboard()
+    {
+        return view('tamu.index');
     }
 }
-

@@ -20,7 +20,6 @@ Route::middleware(['auth', 'admin'])->group(function () {
     // Book routes for admin only
     Route::resource('books', BookController::class);
 });
-
 // Route for guests (non-admin users)
 Route::middleware('auth')->group(function () {
     Route::get('/tamu/dashboard', [TamuController::class, 'dashboard'])->name('tamu.dashboard');
